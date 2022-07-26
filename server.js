@@ -75,7 +75,7 @@ mongoose
     console.log("err in connection", err);
   });
 app.get("/", (req, res) => {
-  res.send("pong");
+  res.send(" hello pong");
 });
 app.use("/auth", AuthRoutes);
 app.use("/user", verifyAccessToken, UserRoutes);

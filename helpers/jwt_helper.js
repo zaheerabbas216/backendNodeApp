@@ -9,7 +9,7 @@ module.exports = {
       };
       const secret = process.env.SECERET_KEY;
       const options = {
-        expiresIn: "1h",
+        expiresIn: "1d",
         issuer: "auth.com",
         audience: userId,
       };

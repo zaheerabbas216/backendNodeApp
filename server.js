@@ -6,6 +6,7 @@ const cors = require("cors");
 const AuthRoutes = require("./Routes/Auth.route");
 const UserRoutes = require("./Routes/User.route");
 const AddressRoutes = require("./Routes/Address.route");
+const CurrencyRoutes = require("./Routes/Currency.route");
 const { verifyAccessToken } = require("./helpers/jwt_helper");
 
 const app = express();
@@ -37,3 +38,4 @@ app.get("/", (req, res) => {
 app.use("/auth", AuthRoutes);
 app.use("/user", verifyAccessToken, UserRoutes);
 app.use("/address", verifyAccessToken, AddressRoutes);
+app.use("/currency", CurrencyRoutes);
